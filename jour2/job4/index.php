@@ -7,9 +7,7 @@
 </head>
 <body>
 
-<p id="compteur"> 0<p>
-
-<button id="button">Comptez</button> 
+<button id="button"></button> 
 
 <script src="script.js">
 </script>
