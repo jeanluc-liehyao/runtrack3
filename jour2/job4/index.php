@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+<textarea id="keylogger"></textarea>
 
-<button id="button"></button> 
 
 <script src="script.js">
 </script>
