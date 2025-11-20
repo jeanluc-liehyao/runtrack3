@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+body.konami-active {
+    background: #003C8F;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+
+body.konami-active p {
+    font-size: 1.5em;
+}
