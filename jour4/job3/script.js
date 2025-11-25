@@ -9,9 +9,18 @@ const results      = document.getElementById("results");
 const container    = document.querySelector(".container");
 const cover        = document.getElementById("cover");
 
-// ====== ANIMATION OUVERTURE DU POKÉDEX ======
+// ====== ANIMATION OUVERTURE / FERMETURE DU POKÉDEX ======
 cover.addEventListener("click", () => {
-    container.classList.add("open");
+    container.classList.toggle("open");
+});
+
+// ====== FERMETURE EN CLIQUANT EN DEHORS ======
+document.addEventListener("click", (event) => {
+    if (container.classList.contains("open")) {
+        if (!container.contains(event.target) && event.target !== cover) {
+            container.classList.remove("open");
+        }
+    }
 });
 
 // ====== CHARGEMENT DES POKÉMON ======
