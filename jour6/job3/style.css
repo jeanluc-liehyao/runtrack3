@@ -1,0 +1,53 @@
+/* Style commun */
+body {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    background-color: #88c1d0;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+}
+
+/* >= 1600px : les sections en ligne (horizontal) */
+@media (min-width: 1600px) {
+    body {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .section {
+        flex: 1 1 0;
+        margin: 10px;
+        /* Pour bien séparer les sections horizontalement */
+    }
+}
+
+/* 768px - 1599px : grille 2x2 */
+@media (min-width: 768px) and (max-width: 1599px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    .section {
+        margin: 0;
+    }
+}
+
+/* <= 767px : colonnes verticales (une section par ligne) */
+@media (max-width: 767px) {
+    body {
+        display: block;
+    }
+    .section {
+        margin: 10px 0;
+    }
+}
