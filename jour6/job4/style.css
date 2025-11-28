@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #f4a460 0% 20%,   /* Pain du haut */
+    #6ab04c 20% 40%,  /* Salade */
+    #e74c3c 40% 60%,  /* Tomate */
+    #ffeb3b 60% 80%,  /* Fromage */
+    #d2691e 80% 100%  /* Pain du bas */
+  );
+}
+
+/* ===== HEADER ===== */
+.header {
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  color: #fff8dc;
+  text-shadow: 0 0 5px #a0522d;
+}
+
+/* ===== NAV BAR ===== */
+.navbar {
+  display: flex;
+  justify-content: center; /* centré dans le header */
+  align-items: center;
+  margin-top: 15px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff8dc;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffeb3b;
+  text-shadow: 0 0 5px #a0522d;
+}
+
+/* ===== BOUTON HAMBURGER ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff8dc;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* BURGER ACTIVE → X */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== RESPONSIVE ≤ 767px ===== */
+@media (max-width: 767px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: left;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 80px; /* sous le header */
+    right: 20px;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .navbar ul li a {
+    color: white;
+    font-size: 18px;
+  }
+
+ /* TITRE À DROITE */
+  .header h1 {
+    font-size: 24px;
+    color: #fff8dc;
+  }
+}
